@@ -316,6 +316,7 @@ func (t *twirp) generateImports(file *descriptor.FileDescriptorProto) {
 	}
 	for pkg, importPath := range deps {
 		t.P(`import `, pkg, ` `, importPath)
+		t.P(`//hey`)
 	}
 	if len(deps) > 0 {
 		t.P()
